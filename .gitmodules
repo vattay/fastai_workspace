@@ -1,0 +1,9 @@
+[submodule "fastbook"]
+	path = fastbook
+	url = https://github.com/fastai/fastbook.git
+[submodule "course22"]
+	path = course22
+	url = https://github.com/fastai/course22.git
+[submodule "airspeed"]
+	path = hf_airspeed
+	url = git@hf.co:spaces/3martini/airspeed
