@@ -1,0 +1,9 @@
+bird_or_not
+boat or not
+hf_airspeed
+node_modules
+speed_dataset
+datasets
+*.jpg
+*.zip
+*.png

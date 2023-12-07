@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.7.1-devel-ubuntu22.04
+FROM nvcr.io/nvidia/cuda:12.3.0-devel-ubuntu22.04
 
 ARG USERNAME=vscode
 
@@ -35,7 +35,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     python3 \
     python3-dev \
     python3-pip \
-    python3-setuptools
+    python3-setuptools \
+    ffmpeg
 
 RUN git lfs install
 
@@ -44,7 +45,11 @@ RUN pip3 install --upgrade pip && pip3 install ipython ipykernel \
 fastai duckduckgo_search \
 nbdev \
 fastbook \
-gradio
+gradio \
+plotly \
+statsmodels \
+timm \
+ffmpeg-python
 
-
-# ENTRYPOINT ["/usr/local/share/docker-init.sh"]
+# Fast Node Manager
+RUN curl -fsSL https://fnm.vercel.app/install | bash
